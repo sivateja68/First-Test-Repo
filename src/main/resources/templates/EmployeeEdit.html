@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<nav class="navbar navbar-light bg-dark">
+		<form class="form-inline">
+			<a class="btn btn-success" th:href="@{/common}">Home</a> <a
+				class="btn btn-info" th:href="@{/emp}">EMP PAGE</a>
+		</form>
+	</nav>
+	<div class="container">
+		<div class="card">
+			<div class="card-header bg-primary text-white text-center">
+				<h3>WELCOME TO EMPLOYEE EDIT PAGE</h3>
+			</div>
+			<div class="card-body">
+				<form th:action="@{/update}" method="POST" th:object="${emp}">
+					<div class="row">
+						<div class="col-4">
+							<label for="empName">Employee Name</label>
+						</div>
+						<div class="col-5">
+							<input type="text" th:field="*{empName}" class="form-control"
+								readOnly="readonly" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-4">
+							<label for="empDesig">Employee Designation</label>
+						</div>
+						<div class="col-5">
+							<input type="text" th:field="*{empDesig}" class="form-control" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-4">
+							<label for="empSalary">Employee Salary</label>
+						</div>
+						<div class="col-5">
+							<input type="text" th:field="*{empSalary}" class="form-control" />
+						</div>
+					</div>
+
+
+					<input type="submit" class="btn btn-success" value="Update">
+				</form>
+				<span th:text="${msg}"></span>
+				<div class="card-header bg-secondary text-white text-center">
+					<span><h3>HERE ENTER THE EMPLOYEE  DETAILS CORRECTLY</h3></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+

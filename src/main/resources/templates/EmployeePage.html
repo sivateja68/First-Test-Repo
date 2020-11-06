@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<title></title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+	height: 450px
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+	padding-top: 20px;
+	background-color: #f1f1f1;
+	height: 100%;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+	background-color: #555;
+	color: white;
+	padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+	.sidenav {
+		height: auto;
+		padding: 15px;
+	}
+	.row.content {
+		height: auto;
+	}
+}
+.header.h1 {
+	background-color: red;
+} 
+</style>
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<ul>
+					<a class="btn btn-primary" href="#">Home</a>
+					<a class="btn btn-primary" href="#">About</a>
+					<a class="btn btn-primary" href="#">Projects</a>
+					<a class="btn btn-primary" href="#">Contact</a>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<header >
+	<h1  style="color:Red;" align="center">
+	REGISTRATION PAGE
+	</h1>
+	</header>
+	<div class="container-fluid text-center">
+		<div class="row content">
+			<div class="col-sm-2 sidenav ">
+				<p><a href="https://www.w3schools.com/">JAVA</a></p>
+				<p><a href="https://www.w3schools.com/">HTML</a></p>
+				<p><a href="https://www.w3schools.com/">CSS</a></p>
+			</div>
+			<div class="col-sm-8 text-left">
+		<form th:action="@{/saveemp}" method="POST" th:object="${emp}">
+  <label for="fname ">Employee Name:</label><br>
+  <input type="text" th:field="*{empName}" class="form-control" /><br>
+  <label for="degis">Employee Designation:</label><br>
+  <input type="text" th:field="*{empDesig}"	class="form-control" /><br>
+  <label for="salary">Employee Salary:</label><br>
+  <input type="text" th:field="*{empSalary}" class="form-control" />
+  <br>
+  <input type="submit" class="btn btn-success" value="Register"><br>
+</form> 
+<div>
+<b><span  class="text-primary" th:text="${msg}"></span></b>
+
+<hr>
+<hr>
+<h1>
+Description:
+</h1>
+<p>Text is just a sequence of words, or more precisely, a sequence
+			of characters. But when we usually deal with language modelling, or
+			natural language processing, we are more concerned about the words as
+			a whole, instead of just worrying about character-level depth of our
+			text data. One reason behind that is, that in the language models,
+			individual characters don’t have a lot of “context”. Characters like
+			‘d’, ‘r’, ‘a’, ‘e’ don’t hold any context individually, but when
+			rearranged in the form of a word, they might generate the word
+			“read”, which might explain some activity you’re probably doing right
+			now. Vectorization is just a method to convert words into long lists
+			of numbers, which might hold some sort of complex structuring, only
+			to be understood by a computer using some sort of machine learning,
+			or data mining algorithm. But even before that, we need to perform a
+			sequence of operations on the text, so that our text can be “cleaned”
+			out. The process of data “cleansing” can vary on the basis of source
+			of the data. Main steps of text data cleansing are listed below with
+			explanations: Removing Unwanted Characters The is a primary step in
+			the process of text cleaning. If we scrap some text from HTML/XML
+			:</p>
+			<h2>
+OTHERS:
+</h2>
+<p>Text is just a sequence of words, or more precisely, a sequence
+			of characters. But when we usually deal with language modelling, or
+			natural language processing, we are more concerned about the words as
+			a whole, instead of just worrying about character-level depth of our
+			 process of text cleaning. If we scrap some text from HTML/XML
+			:</p>
+</div>
+</div>
+
+
+</div>
+</div>
+
+
+
+	<!-- Footer -->
+<footer class="page-footer font-small white pt-4">
+
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase">Footer Content</h5>
+        <p>Here you can use rows and columns to organize your footer content.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://www.facebook.com/">Facebook</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/">Twitter</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/">Instagram</a>
+          </li>
+          <li>
+            <a href="https://in.linkedin.com/">LinkedIn</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">JAVASCRIPT</a>
+          </li>
+          <li>
+            <a href="#!">C LANGUAGE</a>
+          </li>
+          <li>
+            <a href="#!">ANGULAR</a>
+          </li>
+          <li>
+            <a href="#!">SPRING BOOT</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a  href="https://mdbootstrap.com/"> arntechnologies.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+</body>
+</html>
